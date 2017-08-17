@@ -54,12 +54,12 @@ public class Bug extends Actor
     public void act()
     {
         if (canMove()) {
-            this.setColor(getColor());
+            this.setColor(Color.BLUE);
         	move();
         }
         
         else {
-        	//this.setColor(Color.MAGENTA);
+        	this.setColor(Color.MAGENTA);
             turn();
             
      }
