@@ -31,12 +31,17 @@ import java.awt.Color;
  */
 public class VishnuBug extends Actor
 {
+	
+	Color originalColor;
+	Color purple = new Color(128, 0, 128);
+	
     /**
      * Constructs a red bug.
      */
     public VishnuBug()
     {
         setColor(Color.RED);
+    	originalColor = Color.RED;
     }
 
     /**
@@ -46,6 +51,7 @@ public class VishnuBug extends Actor
     public VishnuBug(Color bugColor)
     {
         setColor(bugColor);
+        originalColor = bugColor;
     }
 
     /**
@@ -54,15 +60,12 @@ public class VishnuBug extends Actor
     public void act()
     {
         if (canMove()) {
-            this.setColor(Color.RED);
-        	move();
-        	if (canMove()) {
-        		move();
-        	}
+        	 this.setColor(originalColor);
+        	 move();
         }
         
         else {
-        	this.setColor(Color.MAGENTA);
+        	this.setColor(purple);
             turn();
             
      }

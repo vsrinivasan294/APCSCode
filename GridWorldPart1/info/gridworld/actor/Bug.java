@@ -29,14 +29,22 @@ import java.awt.Color;
  * it moves. <br />
  * The implementation of this class is testable on the AP CS A and AB exams.
  */
+
+
 public class Bug extends Actor
 {
+	
+	
+	
+	Color originalColor;
+	Color purple = new Color(128, 0, 128);
     /**
      * Constructs a red bug.
      */
     public Bug()
     {
         setColor(Color.BLUE);
+        originalColor = Color.BLUE;
     }
 
     /**
@@ -45,6 +53,7 @@ public class Bug extends Actor
      */
     public Bug(Color bugColor)
     {
+    	originalColor = bugColor;
         setColor(bugColor);
     }
 
@@ -53,15 +62,13 @@ public class Bug extends Actor
      */
     public void act()
     {
-        if (canMove()) {
-            this.setColor(Color.BLUE);
+    	if (canMove()) {
+            this.setColor(originalColor);
         	move();
         }
-        
         else {
-        	this.setColor(Color.MAGENTA);
-            turn();
-            
+        	this.setColor(purple);
+            turn(); 
      }
     }
 
