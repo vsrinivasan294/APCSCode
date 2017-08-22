@@ -10,7 +10,7 @@ public class House  {
 		  int height = drawer.height;
 		  int width = drawer.width;
 		  drawer.scale(width/400f,height/300f);
-		  drawer.fill(255);
+		  drawer.fill(0, 200, 100);
 		  drawer.rect(100, 100, 200, 100);
 		  drawer.triangle(100, 100, 300, 100, 200, 75);
 		  drawer.rect(185, 160, 30, 40);
