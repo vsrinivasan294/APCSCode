@@ -11,7 +11,6 @@ public class Person {
 		  int width = drawerPerson.width;
 		  drawerPerson.scale(width/400f,height/300f);
 		  drawerPerson.fill(200, 100, 100);
-
 		  drawerPerson.line(50, 150, 50, 200);
 		  drawerPerson.line(50, 200, 25, 225);
 		  drawerPerson.line(50, 200, 75, 225);
