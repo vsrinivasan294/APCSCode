@@ -1,4 +1,4 @@
-# APCSGridWorld
+# APCS Programs and Labs from Homestead High School
 This is the APCS repo with all the projects and class assignments from Homestead High School. 
 This consists of 
 1) Grid World
