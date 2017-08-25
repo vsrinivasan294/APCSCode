@@ -27,6 +27,9 @@ public class DrawingSurface extends PApplet {
 		  } else if (key == 119) {
 			  house.setColor(250);
 		  }
+		  	else if (key == 37) {
+			  person.moveX(10);
+		  }
 	}
 
 }
