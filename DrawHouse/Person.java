@@ -21,7 +21,7 @@ public class Person {
 		
  		
  		// This is the animated figure class and there will be a person or object represented in this class
- 		  
+ 		
 		  drawerPerson.pushMatrix();
 		  drawerPerson.translate(dispx, dispy);
 		  drawerPerson.scale((float)size, (float)size);
@@ -61,17 +61,16 @@ public class Person {
 		  drawerPerson.popMatrix();
 		}
 
- 	
- 	public void moveXR(int XRPos) {
- 		dispx += XRPos;
- 	}
- 	public void moveYU(int YUPos) {
- 		dispy -= YUPos;
- 	}
- 	public void moveYD(int YDPos) {
- 		dispy += YDPos;
- 	}
- 	public void moveXL(int XLPos) {
- 		dispx -= XLPos;
- 	}
-}
+	public void moveXR(int XRPos) {
+		dispx += XRPos;
+	}
+	public void moveYU(int YUPos) {
+		dispy -= YUPos;
+	}
+	public void moveYD(int YDPos) {
+		dispy += YDPos;
+	}
+	public void moveXL(int XLPos) {
+		dispx -= XLPos;
+	}
+	}

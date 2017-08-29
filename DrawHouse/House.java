@@ -9,21 +9,25 @@ public class House  {
 	private int color = 0;
 	private int x,y;
 	private float size;
+	private int dispx, dispy;
 	
 	public House() {
 		x = 150;
 		y = 120;
 		
+		dispx = 150;
+		dispy = 120;
+		
+		
 		size = 1;
 	}
 	
 	  	public void draw(PApplet drawer) {
-		
 		  int height = drawer.height;
 		  int width = drawer.width;
 		  
 		  drawer.pushMatrix();
-		  drawer.translate(x, y);
+		  drawer.translate(dispx, dispy);
 		  drawer.scale((float)size, (float)size);
 		  drawer.translate(-150,  -125);	   
 		  drawer.fill(color);
@@ -39,6 +43,18 @@ public class House  {
 	  	public void setColor(int c) {
 	  		color = c;
 	  	}
+	  	public void moveXR(int XRPos) {
+			dispx += XRPos;
+		}
+		public void moveYU(int YUPos) {
+			dispy -= YUPos;
+		}
+		public void moveYD(int YDPos) {
+			dispy += YDPos;
+		}
+		public void moveXL(int XLPos) {
+			dispx -= XLPos;
+		}
 		// Code for free hand drawing	
 		/*  
 			public void draw() {

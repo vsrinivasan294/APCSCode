@@ -16,6 +16,7 @@ public class DrawingSurface extends PApplet {
 	}
 	
 	public void draw() {
+		background(255);
 		scale ((float)width/DRAWING_WIDTH, (float)height/DRAWING_HEIGHT);
 		house.draw(this);
 		person.draw(this);
@@ -36,9 +37,21 @@ public class DrawingSurface extends PApplet {
 		  	else if (key == 122) {
 				  person.moveXL(10);
 		  }
-		  	else if (key == 115) {
+		  else if (key == 115) {
 				  person.moveYU(10);
 		  }
+		  else if (key == 107) {
+				  house.moveXR(10);
+		  }
+     	  else if (key == 106) {
+				  house.moveYD(10);
+		  }
+		  else if (key == 104) {
+				  house.moveXL(10);
+		  }
+	      else if (key == 117) {
+				  house.moveYU(10);
+		  }		  
 	}
 
 }
