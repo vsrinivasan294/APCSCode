@@ -29,8 +29,12 @@ double p2x, p2y;
 
 	// Returns true if this line segment and the segment other intersect each other. Returns false if they do not intersect.
 	public boolean intersects(Line other) {
+		if (X1 == X2 && Y1 == Y2 ) {
 		return false;
-		
+		}
+		else {
+			return true;
+		}
 	}
 
 
