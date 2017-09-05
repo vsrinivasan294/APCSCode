@@ -1,4 +1,27 @@
+import java.awt.geom.Point2D;
+
 import processing.core.PApplet;
+/* +good fields
+ * +Everything is organized and split up
+ * 
+ * In your line constructor, your Y1 is equal to itself.
+ * You haven't completed your intersection method, which is why it doesn't work
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ */
+
+
+
+
+
 
 public class Line {
 
@@ -8,7 +31,7 @@ double p2x, p2y;
 	public Line(double x1, double y1, double x2, double y2) {
 		
 		X1 = x1;
-		Y1 = Y1;
+		Y1 = y1;
 		X2 = x2;
 		Y2 = y2;
 		
@@ -29,12 +52,10 @@ double p2x, p2y;
 
 	// Returns true if this line segment and the segment other intersect each other. Returns false if they do not intersect.
 	public boolean intersects(Line other) {
-		if (X1 == X2 && Y1 == Y2 ) {
-		return false;
-		}
-		else {
+	//	Point2D.Double int = calculateIntersectionPoint(other);
+		
 			return true;
-		}
+		
 	}
 
 
