@@ -21,6 +21,7 @@ public class DrawingSurface extends PApplet {
 		house.draw(this);
 		person.draw(this);
 		
+		
 	}
 	public void keyPressed() { // pressing w makes the house white and b makes it black 
 		  if (key == 98) {

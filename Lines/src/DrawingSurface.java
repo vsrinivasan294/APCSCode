@@ -8,8 +8,6 @@ public class DrawingSurface extends PApplet {
 	public DrawingSurface() {
 		l1 = null;
 		l2 = null;
-		mouseRight[i] = 0.0;
-		mouseLeft[i] = 0.0;
 
 	}
 	

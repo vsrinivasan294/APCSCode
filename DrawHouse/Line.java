@@ -1,18 +1,12 @@
 import java.awt.geom.Point2D;
 
 import processing.core.PApplet;
-/* +good fields
- * +Everything is organized and split up
- * 
- * In your line constructor, your Y1 is equal to itself.
- * You haven't completed your intersection method, which is why it doesn't work
- * 
- * 
- */
+
 
 public class Line {
 
-private double X1, Y1, X2, Y2;	
+double X1, Y1, X2, Y2;	
+double p2x, p2y;
 
 	public Line(double x1, double y1, double x2, double y2) {
 		
