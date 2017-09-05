@@ -7,12 +7,14 @@ public class DrawingSurface extends PApplet {
 
 	private House house;
 	private Person person;
+	private Line line;
 	
 	private static final int DRAWING_WIDTH = 400, DRAWING_HEIGHT = 300;
 	
 	public DrawingSurface(){
 		house = new House();
 		person = new Person();
+		line = null;
 	}
 	
 	public void draw() {
