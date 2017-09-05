@@ -51,7 +51,14 @@ public class DrawingSurface extends PApplet {
 		  }
 	      else if (key == 117) {
 				  house.moveYU(10);
-		  }		  
+		  }		
+	      else if (key == 116) {
+			  house.changeSize(-.1);
+	  }		
+	      else if (key == 121) {
+			  house.changeSize(.1);
+	  }		  
+		  
 	}
 
 }

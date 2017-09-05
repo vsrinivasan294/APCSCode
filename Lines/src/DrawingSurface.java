@@ -5,9 +5,6 @@ import processing.core.PApplet;
 public class DrawingSurface extends PApplet {
 
 	private Line l1, l2;
-	double[] mouseRight;
-	double[] mouseLeft;
-	int i = 0;
 	public DrawingSurface() {
 		l1 = null;
 		l2 = null;
@@ -59,9 +56,6 @@ public class DrawingSurface extends PApplet {
 	public void mouseDragged() {
 		if (mouseButton == LEFT) {
 			l1.setPoint2(mouseX,mouseY);
-			i++;
-			mouseRight[i] = mouseX;
-			println(mouseRight[i]);
 		} else if (mouseButton == RIGHT)
 			l2.setPoint2(mouseX,mouseY);
 	}

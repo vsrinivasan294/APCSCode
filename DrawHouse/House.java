@@ -55,6 +55,10 @@ public class House  {
 		public void moveXL(int XLPos) {
 			dispx -= XLPos;
 		}
+		public void changeSize(double d) {
+			size += d;
+		}
+	
 		// Code for free hand drawing	
 		/*  
 			public void draw() {
