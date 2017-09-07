@@ -5,6 +5,7 @@ import processing.core.PApplet;
 public class DrawingSurface extends PApplet {
 
 	private Line l1, l2;
+	
 	public DrawingSurface() {
 		l1 = null;
 		l2 = null;

@@ -23,7 +23,18 @@ public class DrawingSurface extends PApplet {
 		house.draw(this);
 		person.draw(this);
 		
+		Line leftDoor = new Line(house.leftLine());
+		Line rightDoor = new Line(house.rightLine());
+		Line bottomDoor = new Line(house.bottomLine());
+		Line topDoor = new Line(house.topLine());
 		
+		
+		if (rightDoor.intersects(person.leftArm()) || rightDoor.intersects(person.rightArm())||leftDoor.intersects(person.leftArm()) || leftDoor.intersects(person.rightArm())||topDoor.intersects(person.leftArm()) || topDoor.intersects(person.rightArm()) ||bottomDoor.intersects(person.leftArm()) || bottomDoor.intersects(person.rightArm())) {
+			person.changeColor(true);
+		}
+		else {
+			person.changeColor(false);
+		}
 	}
 	public void keyPressed() { // pressing w makes the house white and b makes it black 
 		  if (key == 98) {

@@ -33,7 +33,11 @@ public class House  {
 		  drawer.fill(color);
 		  drawer.rect(100, 100, 200, 100);
 		  drawer.triangle(100, 100, 300, 100, 200, 75);
-		  drawer.rect(185, 160, 30, 40);
+		  //drawer.rect(185, 160, 30, 40);
+		  drawer.line(185, 140, 185, 190);
+		  drawer.line(215, 140, 215, 190);
+		  drawer.line(185, 190, 215, 190);
+		  drawer.line(185, 140, 215, 140);
 		  drawer.rect(120, 120, 30, 30);
 		  drawer.rect(250, 120, 30, 30);
 		  
@@ -57,6 +61,19 @@ public class House  {
 		}
 		public void changeSize(double d) {
 			size += d;
+		}
+		public Line rightLine() {
+			// return new Line(215 + dispx, 140 + dispy, 215 + dispx, 190 + dispy);
+			return new Line(215, 140, 215, 190);
+		}
+		public Line leftLine() {
+			return new Line(185, 140, 185, 190);
+		}
+		public Line bottomLine() {
+			return new Line(185, 190, 215, 190);
+		}
+		public Line topLine() {
+			return new Line(185, 140, 215, 140);
 		}
 	
 		// Code for free hand drawing	

@@ -16,7 +16,15 @@ double p2x, p2y;
 		Y2 = y2;
 		
 	}
+	
+	public Line(Line another) {
 
+		X1 = another.X1;
+		Y1 = another.Y1;
+		X2 = another.X2;
+		Y2 = another.Y2;
+	}
+	
 	// Sets this line’s second point (x2, y2) to a new coordinate
 	public void setPoint2(double x2, double y2) {
 		this.X2 = x2;

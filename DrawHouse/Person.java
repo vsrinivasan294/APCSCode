@@ -8,13 +8,16 @@ public class Person {
 	private int dispx, dispy;
 	//private int xPos;
 	private float size;
+	int a,b,c;
 	
 	
 	public Person() {
 		dispx = 0;
 		dispy = 0;
 		
-		
+		a = 200;
+		b = 100;
+		c = 100;
 		size = 1;
 	}
  	public void draw(PApplet drawerPerson) {
@@ -25,7 +28,7 @@ public class Person {
 		  drawerPerson.pushMatrix();
 		  drawerPerson.translate(dispx, dispy);
 		  drawerPerson.scale((float)size, (float)size);
-		  drawerPerson.fill(200, 100, 100);
+		  drawerPerson.fill(a, b, c);
 		  
 		  
 		  drawerPerson.pushMatrix();
@@ -73,4 +76,30 @@ public class Person {
 	public void moveXL(int XLPos) {
 		dispx -= XLPos;
 	}
+	
+	public Line rightArm() {
+		return new Line(50 + dispx, 200 + dispy, 75 + dispx, 225 + dispy);
+	}
+	public Line leftArm() {
+		return new Line(50 + dispx, 200 + dispy, 25 + dispx, 225 + dispy);
+	}
+
+	public void changeColor(boolean isIntersect) {
+	
+		if (isIntersect) {
+		a = 200;
+		b = 200;
+		c = 200;
+		}
+		else {
+		a = 0;
+		b = 0;
+		c = 0;
+		}
+	}
+	
+	
+	
+	
+	
 	}
