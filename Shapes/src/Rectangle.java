@@ -60,7 +60,14 @@ public class Rectangle {
 		width = x-this.x;
 		height = y-this.y;
 	}
+	
+	public void setColor() {
+		
+	}
 
+	public void setColorBack() {
+		
+	}
 	
 	
 	

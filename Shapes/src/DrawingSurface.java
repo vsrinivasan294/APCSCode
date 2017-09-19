@@ -13,7 +13,7 @@ public class DrawingSurface extends PApplet {
 		r = null;
 		c = null;
 		
-		
+	//	runSketch();
 	
 	}
 	

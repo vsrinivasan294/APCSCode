@@ -6,9 +6,7 @@ public class Circle {
 
 	private double x, y, width, height;
 	
-	// Constructors
-	// Creates a default instance of a Rectangle object with all dimensions
-	//   set to zero.
+	
 	public Circle() {
 		x = 0;
 		y = 0;
@@ -25,31 +23,29 @@ public class Circle {
 		this.width = width;
 		this.height = height;
 	}
-
-	// Methods
-	// Calculates and returns the perimeter of the rectangle
+	
+	//Radius here is the average of the widths and heights of the ellipse
 	public double getPerimeter() {
-		return Math.PI*height;
+		return Math.PI*Math.abs((height+width)/2);
 	}
 
-	// Calculates and returns the area of the rectangle
+	
+	//Radius here is the average of the widths and heights of the ellipse
 	public double getArea() {
-		return Math.PI*height*height/4;
+		return Math.PI*((height+width)/2)*((height+width)/2)/4;
 	}
 	
-	// Returns the center point of the rectangle
+	
 	public Point2D.Double getCenter() {
 		return new Point2D.Double(x+width/2,y+height/2);
 	}
 
-	// Determines whether the point x,y is contained inside this rectangle
+	
 	public boolean isPointInside(double x, double y) {
 		return (x >= this.x && y >= this.y && x <= this.x + width && y <= this.y + height);
 	}
 
-	// Draws a new instance of a Rectangle object with the left and right
-	// edges of the rectangle at x and x + width. The top and bottom edges
-	// are at y and y + height.
+	
 	public void draw(PApplet drawer) {
 		drawer.ellipseMode(PApplet.CORNER);
 		drawer.ellipse((float)x, (float)y, (float)width, (float)height);
