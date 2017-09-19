@@ -1,25 +1,25 @@
 import java.awt.geom.Point2D;
-import java.math.*;
+
 import processing.core.PApplet;
 
-public class Circle {
+public class Rectangle {
 
 	private double x, y, width, height;
 	
 	// Constructors
 	// Creates a default instance of a Rectangle object with all dimensions
 	//   set to zero.
-	public Circle() {
+	public Rectangle() {
 		x = 0;
 		y = 0;
 		width = 0;
 		height = 0;
 	}
 
-	// Creates a new instance of a Circle object with the left and right
+	// Creates a new instance of a Rectangle object with the left and right
 	// edges of the rectangle at x and x + width. The top and bottom edges
 	// are at y and y + height.
-	public Circle(double x, double y, double width, double height) {
+	public Rectangle(double x, double y, double width, double height) {
 		this.x = x;
 		this.y = y;
 		this.width = width;
@@ -29,12 +29,12 @@ public class Circle {
 	// Methods
 	// Calculates and returns the perimeter of the rectangle
 	public double getPerimeter() {
-		return Math.PI*height;
+		return 2*(width+height);
 	}
 
 	// Calculates and returns the area of the rectangle
 	public double getArea() {
-		return Math.PI*height*height/4;
+		return width*height;
 	}
 	
 	// Returns the center point of the rectangle
@@ -51,8 +51,8 @@ public class Circle {
 	// edges of the rectangle at x and x + width. The top and bottom edges
 	// are at y and y + height.
 	public void draw(PApplet drawer) {
-		drawer.ellipseMode(PApplet.CORNER);
-		drawer.ellipse((float)x, (float)y, (float)width, (float)height);
+		drawer.rectMode(PApplet.CORNER);
+		drawer.rect((float)x, (float)y, (float)width, (float)height);
 	}
 	
 	// Sets the coordinate of the Rectangle when the mouse is dragged

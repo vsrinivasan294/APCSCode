@@ -6,15 +6,15 @@ import processing.core.PApplet;
 
 public class DrawingSurface extends PApplet {
 
-	private Rectangle r;
-	private Circle c;
+	private RectangleA rA;
+	private RectangleB rB;
 	
 	public DrawingSurface() {
-		r = null;
-		c = null;
+		rA = null;
+		rB = null;
 		
 		
-	
+		runSketch();
 	}
 	
 	// The statements in the setup() function 
@@ -32,22 +32,23 @@ public class DrawingSurface extends PApplet {
 		fill(255);
 		textAlign(CENTER);
 		
-		if (r != null) {
-			stroke(255,0,255);
+		if (rA != null) {
+			stroke(255,0,0);
 			fill(255);
-			r.draw(this);
-			Point2D.Double center = r.getCenter();
+			rA.draw(this);
+			Point2D.Double center = rA.getCenter();
 			fill(0);
-			text(r.getPerimeter()+"\n"+r.getArea(),(float)center.x,(float)center.y);
+			text(rA.getPerimeter()+"\n"+rA.getArea(),(float)center.x,(float)center.y);
 		}
-		if (c != null) {
-			stroke(0,255,255);
+		if (rB != null) {
+			stroke(0,255,0);
 			fill(255);
-			c.draw(this);
-			Point2D.Double center = c.getCenter();
+			rB.draw(this);
+			Point2D.Double center = rB.getCenter();
 			fill(0);
-			text(c.getPerimeter()+"\n"+c.getArea(),(float)center.x,(float)center.y);
+			text(rB.getPerimeter()+"\n"+rB.getArea(),(float)center.x,(float)center.y);
 		}
+
 		fill(0);
 		textSize(12);
 		
@@ -56,21 +57,20 @@ public class DrawingSurface extends PApplet {
 	
 	public void mousePressed() {
 		if (mouseButton == LEFT) {
-			r = new Rectangle(mouseX,mouseY,0,0);
-		} 
-		 else if (mouseButton == RIGHT) {
-				c = new Circle(mouseX,mouseY,0,0);
-		}
-	}
-	public void mouseDragged() {
-		if (mouseButton == LEFT) {
-			r.setPoint(mouseX,mouseY);
-		} 
-		else if (mouseButton == RIGHT) {
-			c.setPoint(mouseX,mouseY);
+			rA = new RectangleA(mouseX,mouseY,0,0);
+		} else if (mouseButton == RIGHT)
+			rB = new RectangleB(mouseX,mouseY,0,0);
 	}
 	
+	
+	public void mouseDragged() {
+		if (mouseButton == LEFT) {
+			rA.setBottomRight(mouseX,mouseY);
+		} else if (mouseButton == RIGHT)
+			rB.setBottomRight(mouseX,mouseY);
 	}
+	
+	
 }
 
 
