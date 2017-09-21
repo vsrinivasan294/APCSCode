@@ -1,7 +1,10 @@
+package vishnu.testers;
 
 import java.awt.geom.Point2D;
 
 import processing.core.PApplet;
+import vishnu.shapes.Circle;
+import vishnu.shapes.Rectangle;
 
 
 public class DrawingSurface extends PApplet {

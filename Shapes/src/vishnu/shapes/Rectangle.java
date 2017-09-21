@@ -1,3 +1,5 @@
+package vishnu.shapes;
+
 
 import java.awt.geom.Point2D;
 
@@ -10,7 +12,7 @@ import processing.core.PApplet;
  */
 public class Rectangle {
 
-	private double x, y, width, height;
+	private double x, y, width, height, color;
 	
 	// Constructors
 	// Creates a default instance of a Rectangle object with all dimensions
@@ -21,6 +23,7 @@ public class Rectangle {
 		y = 0;
 		width = 0;
 		height = 0;
+		color = 20;
 	}
 
 	// Creates a new instance of a Rectangle object with the left and right
@@ -99,6 +102,7 @@ public class Rectangle {
 	 */
 	public void draw(PApplet drawer) {
 		drawer.rectMode(PApplet.CORNER);
+	//	drawer.fill((int) color);
 		drawer.rect((float)x, (float)y, (float)width, (float)height);
 	}
 	
