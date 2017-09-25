@@ -10,11 +10,22 @@ import processing.core.PApplet;
  * 
  * 
  */
-
+/**
+ * 
+ * @author Vishnu
+ * This is the Line class which creates and draws a Line in the Drawing Surface
+ */
 public class Line {
 
 private double X1, Y1, X2, Y2;	
 
+/**
+ * 
+ * @param x1 - one x coordinate of the line
+ * @param y1 - corresponding y cooridnate of the point
+ * @param x2 - other x coordinate of the line
+ * @param y2 - y coordinate of the cother point of the line
+ */
 	public Line(double x1, double y1, double x2, double y2) {
 		
 		X1 = x1;
@@ -25,12 +36,21 @@ private double X1, Y1, X2, Y2;
 	}
 
 	// Sets this line’s second point (x2, y2) to a new coordinate
+	/**
+	 * 
+	 * @param x2 - sets the x2 point to a new location when dragged from the initial one
+	 * @param y2 - sets the y2 point to a new location when dragged from the initial one
+	 */
 	public void setPoint2(double x2, double y2) {
 		this.X2 = x2;
 		this.Y2 = y2;
 	}
 
 	// Draws this line using the PApplet passed as an argument
+	/**
+	 * 
+	 * @param drawer - This dreaws the line usinbg the processing library
+	 */
 	public void draw(PApplet drawer) {
 		
 		drawer.line((int)(X1), (int)(Y1), (int)(X2), (int)(Y2));
@@ -38,6 +58,11 @@ private double X1, Y1, X2, Y2;
 	}
 
 	// Returns true if this line segment and the segment other intersect each other. Returns false if they do not intersect.
+	/**
+	 * 
+	 * @param other - Checks if the other line intersects or not
+	 * @return - Gives a Boolean as to whetgher the lines intersect or not
+	 */
 	public boolean intersects(Line other) {
 	//	Point2D.Double int = calculateIntersectionPoint(other);
 		
