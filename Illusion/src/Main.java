@@ -2,12 +2,13 @@ import java.awt.Dimension;
 import javax.swing.JFrame;
 import processing.awt.PSurfaceAWT;
 import processing.core.PApplet;
+//import processing.core.PApplet;
 
 public class Main extends PApplet
 {
 	public static void main(String args[]) {
 		DrawingSurface drawing = new DrawingSurface();
-		PApplet.runSketch(new String[]{""});
+		PApplet.runSketch(new String[]{""}, drawing);
 		PSurfaceAWT surf = (PSurfaceAWT) drawing.getSurface();
 		PSurfaceAWT.SmoothCanvas canvas = (PSurfaceAWT.SmoothCanvas) surf.getNative();
 		JFrame window = (JFrame)canvas.getFrame();

@@ -10,15 +10,16 @@ import processing.core.PApplet;
  * @author Vishnu
  * This is the rectangle class which creates and draws a rectangle in the Drawing Surface
  */
-public class Rectangle {
+public class Rectangle extends Shape {
 
-	private double x, y, width, height, color;
+	private double width, height, color;
 	
 	// Constructors
 	// Creates a default instance of a Rectangle object with all dimensions
 	//   set to zero.
 	
 	public Rectangle() {
+		super (0,0);
 		x = 0;
 		y = 0;
 		width = 0;
@@ -37,6 +38,7 @@ public class Rectangle {
 	 * @param height - height of the rect 
 	 */
 	public Rectangle(double x, double y, double width, double height) {
+		super (x,y);
 		this.x = x;
 		this.y = y;
 		this.width = width;
