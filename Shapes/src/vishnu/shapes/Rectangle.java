@@ -1,6 +1,7 @@
 package vishnu.shapes;
 
 
+import java.awt.Color;
 import java.awt.geom.Point2D;
 
 import processing.core.PApplet;
@@ -36,13 +37,22 @@ public class Rectangle extends Shape {
 	 * @param height - height of the rect 
 	 */
 	public Rectangle(double x, double y, double width, double height) {
-		super (x,y);
-		this.x = x;
-		this.y = y;
-		this.width = width;
-		this.height = height;
+		super(x, y);
+		this.x = (float)x;
+		this.y = (float)y;
+		this.width = (float)width;
+		this.height = (float)height;
+		
 	}
-
+	public Rectangle(double x, double y, double width, double height, Color fill, Color stroke, double strokeWeight) {
+		super(fill, stroke, (float)strokeWeight);
+		this.x = (float)x;
+		this.y = (float)y;
+		this.width = (float)width;
+		this.height = (float)height;
+		
+	}
+	
 	// Methods
 	// Calculates and returns the perimeter of the rectangle
 	/**
@@ -133,6 +143,12 @@ public class Rectangle extends Shape {
 	 */
 	public void setColorBack() {
 		
+	}
+
+	@Override
+	public double calcArea() {
+		// TODO Auto-generated method stub
+		return 0;
 	}
 	
 	

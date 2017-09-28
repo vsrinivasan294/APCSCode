@@ -1,4 +1,5 @@
 package vishnu.shapes;
+import java.awt.Color;
 import java.awt.geom.Point2D;
 import java.math.*;
 import processing.core.PApplet;
@@ -32,9 +33,18 @@ public class Circle extends Shape {
 	 * @param height
 	 */
 	public Circle(double x, double y, double width, double height) {
+		
 		super(x,y);
 		this.x = x;
 		this.y = y;
+		this.width = width;
+		this.height = height;
+	}
+	
+	public Circle(double x, double y, double width, double height, Color fill, Color stroke, double strokeWeight) {
+		super(fill, stroke, (float)strokeWeight);
+		this.x = (float)x;
+		this.y = (float)y;
 		this.width = width;
 		this.height = height;
 	}
@@ -81,7 +91,7 @@ public class Circle extends Shape {
 	 * 
 	 * @param drawer - is the object being drawn
 	 * @pre - needs an object to be called
-	 * @post - will change the previouse drawing
+	 * @post - will change the previous drawing
 	 *
 	 */
 	public void draw(PApplet drawer) {
@@ -98,6 +108,12 @@ public class Circle extends Shape {
 	public void setPoint(double x, double y) {
 		width = x-this.x;
 		height = y-this.y;
+	}
+
+	@Override
+	public double calcArea() {
+		// TODO Auto-generated method stub
+		return 0;
 	}
 
 	

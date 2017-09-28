@@ -2,14 +2,16 @@ package vishnu.shapes;
 
 import java.awt.Color;
 
-public class Shape {
+import processing.core.PApplet;
+
+public abstract class Shape {
 
 	//Fields
 	protected double x;
 	protected double y;
-	private Color fill;
-	private Color stroke;
-	private float strokeWeight;
+	protected Color fill;
+	protected Color stroke;
+	protected float strokeWeight;
 	
 	
 	//Constructor
@@ -22,7 +24,10 @@ public class Shape {
 	}
 	
 	//Methods
-	public void Shapes(Color fill, Color stroke, float strokeWeight) {
+	
+	public abstract double calcArea();
+	
+	public Shape(Color fill, Color stroke, float strokeWeight) {
 		this.fill = fill;
 		this.stroke = stroke;
 		this.strokeWeight = strokeWeight;
@@ -33,6 +38,21 @@ public class Shape {
 	}
 	public Color getFillColor() {
 		return this.fill;
+	}
+	
+	public void draw(PApplet drawer) {
+		drawer.translate((float)(x),(float)(y));
+		drawer.stroke(stroke.getRGB());
+		
+	}
+	public void setStrokeWeight(float newWeight) {
+		this.strokeWeight = newWeight;
+	}
+	public void increaseStrokeWeight(float amount) {
+		this.strokeWeight = this.strokeWeight + amount;
+	}
+	public float getStrokeWeight() {
+		return this.strokeWeight;
 	}
 	
 	
