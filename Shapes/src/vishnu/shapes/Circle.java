@@ -8,14 +8,14 @@ import processing.core.PApplet;
  * @author Vishnu
  *
  */
-public class Circle {
+public class Circle extends Shape {
 
-	private double x, y, width, height;
+	private double width, height;
 	
 	
 	public Circle() {
-		x = 0;
-		y = 0;
+		super (0,0);
+	
 		width = 0;
 		height = 0;
 	}
@@ -32,6 +32,7 @@ public class Circle {
 	 * @param height
 	 */
 	public Circle(double x, double y, double width, double height) {
+		super(x,y);
 		this.x = x;
 		this.y = y;
 		this.width = width;

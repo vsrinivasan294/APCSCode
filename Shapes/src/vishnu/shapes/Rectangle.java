@@ -20,8 +20,6 @@ public class Rectangle extends Shape {
 	
 	public Rectangle() {
 		super (0,0);
-		x = 0;
-		y = 0;
 		width = 0;
 		height = 0;
 		color = 20;
@@ -90,7 +88,9 @@ public class Rectangle extends Shape {
 	 * 
 	 */
 	public boolean isPointInside(double x, double y) {
-		return (x >= this.x && y >= this.y && x <= this.x + width && y <= this.y + height);
+		boolean xInside = x>=this.x && x<=(this.x + width);
+		boolean yInside = y>=this.y && y<=(this.y + height);
+		return xInside&&yInside;
 	}
 
 	// Draws a new instance of a Rectangle object with the left and right

@@ -4,6 +4,7 @@ import java.awt.geom.Point2D;
 
 import processing.core.PApplet;
 import vishnu.shapes.Circle;
+import vishnu.shapes.Line;
 import vishnu.shapes.Rectangle;
 
 
@@ -11,10 +12,12 @@ public class DrawingSurface extends PApplet {
 
 	private Rectangle r;
 	private Circle c;
+	private Line l;
 	
 	public DrawingSurface() {
 		r = null;
 		c = null;
+		l = null;
 		
 	//	runSketch();
 	
@@ -51,6 +54,11 @@ public class DrawingSurface extends PApplet {
 			fill(0);
 			text(c.getPerimeter()+"\n"+c.getArea(),(float)center.x,(float)center.y);
 		}
+		/*if (l != null) {
+			stroke(0,255,255);
+			l.draw(this);
+		}
+		*/
 		fill(0);
 		textSize(12);
 		
