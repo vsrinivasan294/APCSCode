@@ -13,17 +13,18 @@ import processing.core.PApplet;
  */
 public class Rectangle extends Shape {
 
-	private double width, height, color;
+	private static double width;
+	private static double height;
 	
 	// Constructors
 	// Creates a default instance of a Rectangle object with all dimensions
 	//   set to zero.
 	
 	public Rectangle() {
-		super (0,0);
+		super (x, y, height, width);
 		width = 0;
 		height = 0;
-		color = 20;
+		
 	}
 
 	// Creates a new instance of a Rectangle object with the left and right
@@ -37,7 +38,7 @@ public class Rectangle extends Shape {
 	 * @param height - height of the rect 
 	 */
 	public Rectangle(double x, double y, double width, double height) {
-		super(x, y);
+		super(x, y, height, width);
 		this.x = (float)x;
 		this.y = (float)y;
 		this.width = (float)width;
@@ -113,6 +114,7 @@ public class Rectangle extends Shape {
 	 * @post draws a rectangle 
 	 */
 	public void draw(PApplet drawer) {
+	//	super.draw(drawer);
 		drawer.rectMode(PApplet.CORNER);
 	//	drawer.fill((int) color);
 		drawer.rect((float)x, (float)y, (float)width, (float)height);
@@ -143,12 +145,6 @@ public class Rectangle extends Shape {
 	 */
 	public void setColorBack() {
 		
-	}
-
-	@Override
-	public double calcArea() {
-		// TODO Auto-generated method stub
-		return 0;
 	}
 	
 	

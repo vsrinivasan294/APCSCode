@@ -11,12 +11,15 @@ import processing.core.PApplet;
  */
 public class Circle extends Shape {
 
-	private double width, height;
+	private static double width;
+	private static double height;
 	
 	
 	public Circle() {
-		super (0,0);
+		super (x, y, height, width);
 	
+		x = 0;
+		y = 0;
 		width = 0;
 		height = 0;
 	}
@@ -34,7 +37,7 @@ public class Circle extends Shape {
 	 */
 	public Circle(double x, double y, double width, double height) {
 		
-		super(x,y);
+		super(x,y, height, width);
 		this.x = x;
 		this.y = y;
 		this.width = width;
@@ -95,6 +98,7 @@ public class Circle extends Shape {
 	 *
 	 */
 	public void draw(PApplet drawer) {
+	//	super.draw(drawer);
 		drawer.ellipseMode(PApplet.CORNER);
 		drawer.ellipse((float)x, (float)y, (float)width, (float)height);
 	}
@@ -110,13 +114,7 @@ public class Circle extends Shape {
 		height = y-this.y;
 	}
 
-	@Override
-	public double calcArea() {
-		// TODO Auto-generated method stub
-		return 0;
-	}
-
-	
+		
 	
 	
 	

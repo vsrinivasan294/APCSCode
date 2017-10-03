@@ -15,7 +15,7 @@ import processing.core.PApplet;
  * @author Vishnu
  * This is the Line class which creates and draws a Line in the Drawing Surface
  */
-public class Line {
+public class Line extends Shape {
 
 private double X1, Y1, X2, Y2;	
 
@@ -27,7 +27,7 @@ private double X1, Y1, X2, Y2;
  * @param y2 - y coordinate of the cother point of the line
  */
 	public Line(double x1, double y1, double x2, double y2) {
-		
+		super (x, y, y2, y2);
 		X1 = x1;
 		Y1 = y1;
 		X2 = x2;
@@ -52,7 +52,7 @@ private double X1, Y1, X2, Y2;
 	 * @param drawer - This dreaws the line usinbg the processing library
 	 */
 	public void draw(PApplet drawer) {
-		
+		super.draw(drawer);
 		drawer.line((int)(X1), (int)(Y1), (int)(X2), (int)(Y2));
 		
 	}

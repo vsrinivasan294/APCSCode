@@ -40,7 +40,7 @@ public class DrawingSurface extends PApplet {
 		
 		if (r != null) {
 			stroke(255,0,255);
-			fill(255);
+			//fill(255);
 			r.draw(this);
 			Point2D.Double center = r.getCenter();
 			fill(0);
