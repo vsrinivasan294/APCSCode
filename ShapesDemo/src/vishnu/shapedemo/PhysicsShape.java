@@ -18,7 +18,21 @@ public class PhysicsShape {
 	}
 	
 	public void draw (PApplet drawer) {
-		
+		boundingShape.draw(drawer);
 	}
 	
+	public Shape getBoundingShape() {
+		return boundingShape;
+	}
+	
+	public void setVelocity(double vx, double vy) {
+		this.vx = vx;
+		this.vy = vy;	
+	}
+	
+	public void act() {
+	
+		double x = boundingShape.getX();
+		double y = boundingShape.getY();
+	}
 }
